@@ -4,14 +4,26 @@ const ContactMe = () => {
   return (
     <div
       id="contact"
-      className="bg-gray-900 text-white py-16 px-6 md:px-20 relative overflow-hidden"
+      className="relative text-white py-16 px-6 md:px-20 overflow-hidden"
     >
-      <h2 className="text-3xl font-semibold text-center mb-12">Contact Me</h2>
+      {/* Background image and overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/assets/div.map-image.png" // Replace with correct path
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black opacity-30" />
+      </div>
+
+      {/* Content */}
+      <h2 className="relative z-10 text-3xl font-semibold text-center mb-12">
+        Contact Me
+      </h2>
 
       <div className="grid md:grid-cols-2 gap-10 items-start relative z-10">
         {/* LEFT SIDE */}
         <div className="space-y-6">
-          {/* Address Card */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -24,7 +36,6 @@ const ContactMe = () => {
             </p>
           </motion.div>
 
-          {/* Email Card */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -73,15 +84,6 @@ const ContactMe = () => {
             Send Message
           </button>
         </motion.form>
-      </div>
-
-      {/* Background dots or map could go here as an absolutely positioned background */}
-      <div className="absolute inset-0 opacity-10 z-0">
-        <img
-          src="/your-dotted-map.png" // Replace with correct background image
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
       </div>
     </div>
   );

@@ -21,10 +21,7 @@ const services = [
 
 function WhatIDo() {
   return (
-    <section
-      id="services"
-      className="bg-[#0f0f1c] text-white py-20 px-6 md:px-16"
-    >
+    <section id="services" className="bg-[#000] text-white py-20 px-6 md:px-16">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-12">What I Do</h2>
 

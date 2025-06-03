@@ -2,14 +2,14 @@ import React from "react";
 
 function About() {
   return (
-    <section id="about" className="bg-[#0f0f1c] text-white py-20 px-6 md:px-16">
+    <section id="about" className="bg-[#000] text-white py-20 px-6 md:px-16">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
         {/* Illustration Left */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/921/921347.png" // replace with your vector
+            src="/assets/ab.png" // replace with your vector
             alt="About illustration"
-            className="w-64 h-auto"
+            className="h-auto"
           />
         </div>
 

@@ -53,18 +53,32 @@ const PostCard = ({ image, title, date, author, excerpt }) => (
 );
 
 const FeaturedPosts = () => (
-  <section id="blog" className="bg-zinc-950 py-20 px-4 text-center">
+  <section
+    id="blog"
+    className="relative bg-cover bg-center py-20 px-4 text-center"
+  >
+    {/* Background image */}
+    <div className="absolute inset-0">
+      <img
+        src="/assets/Section.png"
+        alt="Background"
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black opacity-90" />
+    </div>
+
+    {/* Content */}
     <motion.h2
       initial={{ opacity: 0, y: -20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="text-2xl font-semibold text-white mb-12"
+      className="relative z-10 text-2xl font-semibold text-white mb-12"
     >
       Featured Posts
     </motion.h2>
 
-    <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-6xl mx-auto">
+    <div className="relative z-10 flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-6xl mx-auto">
       {posts.map((post, index) => (
         <PostCard key={index} {...post} />
       ))}

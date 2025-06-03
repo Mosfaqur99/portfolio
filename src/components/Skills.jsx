@@ -18,10 +18,10 @@ const professionalSkills = [
 const Circle = ({ percent }) => {
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
-  const dash = (percent / 100) * circumference;
 
   return (
     <svg width="100" height="100" className="transform -rotate-90">
+      {/* Background Circle */}
       <circle
         cx="50"
         cy="50"
@@ -30,6 +30,7 @@ const Circle = ({ percent }) => {
         strokeWidth="8"
         fill="none"
       />
+      {/* Foreground Animated Circle */}
       <motion.circle
         cx="50"
         cy="50"
@@ -38,11 +39,11 @@ const Circle = ({ percent }) => {
         strokeWidth="8"
         fill="none"
         strokeDasharray={circumference}
-        strokeDashoffset={circumference - dash}
         initial={{ strokeDashoffset: circumference }}
-        animate={{ strokeDashoffset: circumference - dash }}
-        transition={{ duration: 1.5 }}
+        animate={{ strokeDashoffset: circumference * (1 - percent / 100) }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
       />
+      {/* Percentage Label */}
       <text
         x="50%"
         y="50%"

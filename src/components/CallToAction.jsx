@@ -2,15 +2,10 @@ import { motion } from "framer-motion";
 
 export default function CallToAction() {
   return (
-    <div className="relative bg-black bg-opacity-60 text-white py-20 px-6 flex items-center justify-center overflow-hidden">
+    <div className="relative bg-[url(/assets/Section.png)] bg-cover bg-center text-white py-20 px-6 flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img
-          src="/your-background.jpg" // Replace with your image path
-          alt="Background"
-          className="w-full h-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-black opacity-60" />
+        <div className="absolute inset-0 bg-black opacity-90" />
       </div>
 
       {/* Content */}

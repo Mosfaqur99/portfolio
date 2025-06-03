@@ -31,7 +31,7 @@ const ClientReviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div className="bg-gray-900 text-white py-16 px-4 text-center">
+    <div className="bg-black text-white py-16 px-4 text-center">
       <h2 className="text-3xl font-semibold mb-10">Client Reviews</h2>
 
       <div className="flex justify-center gap-6 flex-wrap">
